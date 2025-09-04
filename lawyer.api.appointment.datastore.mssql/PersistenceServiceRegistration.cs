@@ -2,12 +2,14 @@ using lawyer.api.appointment.application.Contracts.Interfaces.Persistence.Exampl
 using lawyer.api.appointment.application.Contracts.Interfaces.Persistence.City;
 using lawyer.api.appointment.application.Contracts.Interfaces.Persistence.Country;
 using lawyer.api.appointment.application.Contracts.Interfaces.Persistence.SocialNetwork;
+using lawyer.api.appointment.application.Contracts.Interfaces.Persistence.Meeting;
 using lawyer.api.appointment.datastore.mssql.DatabaseContext;
 using lawyer.api.appointment.datastore.mssql.Model.MappingProfile;
 using lawyer.api.appointment.datastore.mssql.Repositories.Example;
 using lawyer.api.appointment.datastore.mssql.Repositories.City;
 using lawyer.api.appointment.datastore.mssql.Repositories.Country;
 using lawyer.api.appointment.datastore.mssql.Repositories.SocialNetwork;
+using lawyer.api.appointment.datastore.mssql.Repositories.Meeting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -30,6 +32,8 @@ public static class PersistenceServiceRegistration
         services.AddScoped<ICountryQueryRepository, CountryQueryRepository>();
         services.AddScoped<ISocialNetworkCommandRepository, SocialNetworkCommandRepository>();
         services.AddScoped<ISocialNetworkQueryRepository, SocialNetworkQueryRepository>();
+        services.AddScoped<IMeetingCommandRepository, MeetingCommandRepository>();
+        services.AddScoped<IMeetingQueryRepository, MeetingQueryRepository>();
 
         return services;
     }

@@ -12,5 +12,6 @@ public class ApplicationMappingProfile : Profile
         CreateMap<City, CityEntity>().ReverseMap();
         CreateMap<Country, CountryEntity>().ReverseMap();
         CreateMap<SocialNetwork, SocialNetworkEntity>().ReverseMap();
+        CreateMap<Meeting, MeetingEntity>().ReverseMap();
     }
 }
