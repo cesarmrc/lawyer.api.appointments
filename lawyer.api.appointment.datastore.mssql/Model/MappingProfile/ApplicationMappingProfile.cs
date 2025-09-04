@@ -13,5 +13,6 @@ public class ApplicationMappingProfile : Profile
         CreateMap<Country, CountryEntity>().ReverseMap();
         CreateMap<SocialNetwork, SocialNetworkEntity>().ReverseMap();
         CreateMap<Meeting, MeetingEntity>().ReverseMap();
+        CreateMap<Payment, PaymentEntity>().ReverseMap();
     }
 }
